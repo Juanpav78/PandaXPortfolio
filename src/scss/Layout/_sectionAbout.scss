@@ -1,0 +1,44 @@
+.sectionAboutMe{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+    h2,h3{
+        margin: 2.5rem 0;
+        
+        color: azure;
+        font-family: $titles;
+    }
+    .infoAboutMe{
+        display: flex;
+        justify-content: space-between;
+
+        .profile{
+            margin-left: 3rem;
+        }
+        
+    }
+
+    
+}
+
+.techAboutMe{
+    .tools{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+        height: 90%;
+        width: 55rem;
+
+        .icoinfo{
+            width: 20rem;
+            margin: auto;
+
+            i{
+                font-size: 3rem;
+                margin: .3rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+}

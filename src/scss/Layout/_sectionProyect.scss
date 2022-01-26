@@ -1,0 +1,46 @@
+.sectionProyect{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    h2{
+        color: azure;
+        font-family: $titles;
+        text-align: center;
+        margin: 2.5rem 0;
+        margin-bottom: 5rem;
+        padding: 0;
+    }
+    .proyect{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+        height: 100%;
+    
+
+
+    .glass{
+        width: 40rem;
+        height: 25rem;
+        margin: auto;
+
+        .info{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        i{
+            font-size: 2.5rem;
+        }
+
+        img{
+            width: 30rem;
+            height: 15.5rem;
+            border: 2px solid $greenPrimary;
+            box-shadow: 0 0 3px 2px $greenDark;
+        }
+    }
+    }
+    
+}
