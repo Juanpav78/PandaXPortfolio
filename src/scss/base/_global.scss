@@ -1,0 +1,152 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    
+}
+
+.contenedor{
+    max-width: 85%;
+    margin: auto;
+
+    @include tablet{
+        max-width: 90%;
+    }
+}
+
+.section{
+    box-shadow: inset 0px 0px 25px 10px rgb(27, 27, 27);
+    padding-bottom: 4.5rem;
+    &:nth-of-type(2){
+        background-image: url('../img/bg_home.jpg');
+        box-shadow: none;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center ;
+        @include telefono{
+            background-image: url('../img/fondocel.png');
+            background-repeat: repeat;
+            background-size: auto;
+        }
+    }
+    
+}
+
+p{
+    font-family: $text;
+    color: azure;
+}
+
+.glass{
+    background-color: lighten($color: $greyDark, $amount: 1);
+    border-radius: 5px;
+    padding: .5rem;
+    box-shadow: 0 0 35px black ;
+
+    &:hover{
+    box-shadow:0 10px 60px black ;
+    position: relative;
+    }
+}
+
+.html5{
+    color: rgb(227, 76, 38);
+}
+.css3{
+    color: rgb(38, 77, 228);
+}
+
+.javascript{
+    color:	rgb(240, 219, 79) ;
+}
+
+.react{
+    color:	rgb(97, 219, 251);
+}
+.nodejs{
+    color:	rgb(60, 135, 58);
+}
+.php{
+    color: rgb(137, 147, 190);
+}
+
+.git{
+    color: #f34f29;
+}
+
+@keyframes vibrate-1 {
+    0% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-2px, 2px);
+              transform: translate(-2px, 2px);
+    }
+    40% {
+      -webkit-transform: translate(-2px, -2px);
+              transform: translate(-2px, -2px);
+    }
+    60% {
+      -webkit-transform: translate(2px, 2px);
+              transform: translate(2px, 2px);
+    }
+    80% {
+      -webkit-transform: translate(2px, -2px);
+              transform: translate(2px, -2px);
+    }
+    100% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+  }
+#particles-js{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+  @keyframes move{
+  0%  { top: 0px; }
+  20% { top: -50px; }
+  40% { top: -100px; }
+  60% { top: -150px; }
+  80% { top: -200px; }
+  }
+  
+  @-webkit-keyframes move {
+      0%  { top: 0px; }
+      20% { top: -50px; }
+      40% { top: -100px; }
+      60% { top: -150px; }
+      80% { top: -200px; }
+  }
+  @-moz-keyframes move {
+      0%  { top: 0px; }
+      20% { top: -50px; }
+      40% { top: -100px; }
+      60% { top: -150px; }
+      80% { top: -200px; }
+  }
+  @-o-keyframes move {
+      0%  { top: 0px; }
+      20% { top: -50px; }
+      40% { top: -100px; }
+      60% { top: -150px; }
+      80% { top: -200px; }
+  }
+  @keyframes move {
+      0%  { top: 0px; }
+      20% { top: -50px; }
+      40% { top: -100px; }
+      60% { top: -150px; }
+      80% { top: -200px; }
+  }

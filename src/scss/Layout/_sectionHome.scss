@@ -1,0 +1,257 @@
+.sectionHome{
+    background: linear-gradient(23deg,#00211a75,#00735c8a 28%,#32d4b399 59%,#2ab79b6b);
+    width: 50%;
+    min-height: 71rem;
+    box-shadow: 4px 0 50px #1b473c;
+    height: 90%;
+    @include telefono{
+        margin-top: -1rem;
+        max-height: calc(100vh - 14rem);
+    }
+    @include desktop{
+        background: linear-gradient(23deg,#00211a44,#00735c52 28%,#32d4b44f 59%,#2ab79b3d);
+        width: 100%;
+    }
+
+
+}
+
+
+.sectionHomeInfo{
+    font-size: 5rem;
+    color: azure;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $titles;
+    .info2{
+        text-align: center;
+        p{
+            font-size: 2rem;
+            margin-bottom: 0px;
+            margin-top: 8rem;
+        }
+        .btnInfo{
+            display: flex;
+            gap: 2rem;
+            .btn{
+                color: white;
+                &:nth-child(2){
+                    padding: 14px 42px;
+                }
+              }
+            
+        }
+        @include telefono{
+            display: none;
+            visibility: hidden;
+            
+            
+        }
+    }
+    
+    @include tablet{
+         flex-direction: column;   
+    }
+    
+    .info{
+        display: flex;
+        margin: 0 auto;
+        margin-top: 15rem;
+        flex-direction: column;
+        align-items: center;
+
+        @include desktop{
+            
+                margin-top: 3rem;
+            
+        }
+    }
+
+
+    h2{
+        font-size: 6.5rem;
+        margin: 1rem;
+        @include tablet{
+            font-size: 5rem; 
+            margin-top: -1.4rem;
+       }
+        
+    }
+
+
+    .important{
+        font-size: 6rem;
+        color: $greenLigth;
+        padding: 0 1rem;
+        border: solid 2px $greenLigth;
+        box-shadow: 0px 2px 2px rgb(49, 49, 49);
+
+    }
+
+    a{
+        color: $greenPrimary;
+        text-decoration: none;
+    }
+
+    
+    @include tablet{
+      .info{
+          display: block;
+          text-align: center;
+          font-size: 7rem;
+      }  
+      .important{
+          font-size: 7.5rem;
+      }
+    }
+    
+    @include telefono{
+        .info{
+            margin-top: 6rem;
+            h2{
+
+                font-size: 4rem;
+            }
+            
+        }  
+        .important{
+            font-size: 4.5rem;
+        }
+      }
+    @keyframes UpAndDow {
+        20%, 80% {
+            transform: translateY(10px);
+        }
+
+        50%, 100%{
+            transform: translateY(-10px);
+        }     
+    }
+    
+}
+
+.infoHome2{
+    position: absolute;
+    z-index: 0;
+    right: 0px;
+    top: 24rem;
+    width: 50%;
+    img{
+        width: 100%;
+        height: 50rem;
+        @include desktop{
+            display: none;
+            visibility: none;
+        }
+    }
+    
+
+    i{
+        position: absolute;
+        right: 8rem;
+        top: -8rem;
+        color: azure;
+        font-size: 5rem;
+        cursor: pointer;
+        
+    }
+    @include desktop{
+        left: 0;
+        i{
+            left: 175%;
+        }
+    }
+    @include telefono{
+        i{
+            left: 85%;
+            top: 20rem;
+        }
+        
+    }
+}
+.Iam {
+    font: normal 40px/50px Montserrat, sans-serif;
+    color: #999;
+    margin-top: -12rem;
+    margin-left: 12rem;
+    @include desktop{
+        display: none;
+        visibility: none;
+    }
+  }
+  .Iam p {
+    height: 50px;
+    float: left;
+    margin-right: 0.3em;
+  }
+  .Iam b {
+    float: left;
+    overflow: hidden;
+    position: relative;
+    height: 50px;
+    top: 40px;
+  }
+  .Iam .innerIam {
+    display: inline-block;
+    color: $greenLigth;
+    position: relative;
+    white-space: nowrap;
+    top: 0;
+    left: 0;
+  
+  
+  /*animation*/
+  -webkit-animation:move 5s;
+     -moz-animation:move 5s;
+      -ms-animation:move 5s;
+       -o-animation:move 5s;
+          animation:move 5s;
+  /*animation-iteration-count*/
+  -webkit-animation-iteration-count:infinite;
+     -moz-animation-iteration-count:infinite;
+      -ms-animation-iteration-count:infinite;
+       -o-animation-iteration-count:infinite;
+          animation-iteration-count:infinite;
+  /*animation-delay*/
+  -webkit-animation-delay:1s;
+     -moz-animation-delay:1s;
+      -ms-animation-delay:1s;
+       -o-animation-delay:1s;
+          animation-delay:1s;
+  }
+
+    .btn{
+    position: relative;
+    display: block;
+    color: white;
+    font-size: 14px;
+    font-family: $text;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 30px 0;
+    border: 2px solid $white;
+    padding: 14px 59.8px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 1s all ease;
+  }
+  .btn::before{
+    background: $greenPrimary;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+  }
+  .btn3::before{
+    width: 100%;
+    height: 0%;
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+  .btn3:hover::before{
+    height: 380%;
+  }

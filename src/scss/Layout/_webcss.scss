@@ -1,0 +1,744 @@
+.no-nav{
+    @include tablet{
+      display: none;
+      visibility: hidden;
+      background-color: blue;
+    }
+  
+  }
+
+.webCSS{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+    color: azure;
+    font-family: $titles;
+    font-size: 3rem;
+
+  
+
+    i{
+        font-size: 10rem;
+        margin-top: -3.5rem;
+        margin-bottom: 3rem;
+        background-color: azure;
+        border-radius: 10px
+        ;
+
+    }
+
+
+}
+
+.bg-css{
+    background-image: url(../img/BG_css.jpg);
+    box-shadow: inset 0 0 5rem rgba(6, 6, 160, 0.541);
+
+    .glass{
+        box-shadow: 0 0 2rem rgba(255, 255, 255, 0.301);
+        max-width: 60rem;
+        margin: auto;
+
+        font-family: $titles;
+
+        p{
+            border: 1px solid rgb(211, 211, 211);
+            margin: 0;
+            padding: 1rem;
+
+        }
+    }
+}
+
+
+
+.Days{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    margin: 2rem 0;
+    
+    padding: 2rem 0;
+    .glass{
+        animation: none;
+    }
+    .Proyectday{
+        width: 27rem;
+        margin: auto;
+        height: 28rem;
+    }
+
+    @include desktop{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include tablet{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+    @include telefono{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+.day1{
+
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    background-image: linear-gradient(220deg, rgb(24, 159, 201) 35%, rgb(38, 38, 121) );
+    .center {
+        position: relative;
+        top: 9rem;
+        display: flex;
+        flex-direction: column;
+
+        
+      }
+
+    .number{     
+        position: relative;
+        z-index: 1;
+        left: -.5rem;
+
+        .one-one, .one-two{
+            background-color: azure;
+            position: absolute;
+            box-shadow: 0 0 8px rgba(43, 43, 43, 0.247);
+            border-radius: 3px;
+            top: -2rem;
+        }
+
+        .one-one{
+            height: 8.4rem;
+            width: 2.4rem;
+            left: 6.5rem;
+            z-index: 5;
+        }
+        .one-two{
+            height: 4.4rem;
+            width: 2rem;
+            left: 5.4rem;
+            border-radius: 15px 3px 3px 3px;
+            top: -2.6rem;
+            z-index: 4;
+            transform: rotate(49deg);
+        }
+
+        .zero-one, .zero-two{
+            background-color: none;
+            position: absolute;
+            border-radius: 50%;
+            width: 8.4rem;
+            height:8.4rem;
+            top: -2rem;
+            border: 2rem solid azure;
+            box-shadow: 0 0 10px rgba(43, 43, 43, 0.247),
+                        inset 0 0 10px rgba(43, 43, 43, 0.247);
+
+        }
+
+        
+        .zero-one{
+            z-index: 4;
+            left: 7.8rem;
+        }
+        .zero-two{
+            z-index: 3;
+            left: 14.5rem;
+
+        }
+    }
+
+    .big, .small{
+        position: absolute;
+        font-family: 'Courier New', 'Courier', sans-serif;
+        color: azure;
+        font-weight: 700;
+    }
+
+    .big{  
+        top: 5rem;
+        left: 6rem;
+        text-transform: uppercase;
+        font-size: 6.3rem;
+        margin-top: -2rem;
+        letter-spacing: .2rem;
+    }
+
+    .small{
+        position: relative;
+        text-align: center;
+        top: 9.8rem;
+        left: .8rem;
+        font-size: 1.9rem;
+        text-transform: uppercase;
+        display: block; 
+        letter-spacing: .05rem;
+
+
+    }
+}
+
+.day2{
+    background-color: rgb(30, 184, 132);
+
+    .center {
+        position: relative;
+        top: 50%;
+      }
+
+    .ico{
+        cursor: pointer;
+  
+        height: 7rem;
+
+        position: relative;
+        top: -4rem;
+        
+        .line1, .line2, .line3{
+            position: absolute;
+            width: 7.4rem;
+            height: .7rem;
+            border-radius: 3px;
+            box-shadow: 0 0 6px rgba(26, 26, 26, 0.7);
+            background-color: azure;
+        }
+
+        .line1{
+            top: 1rem;
+            left: 9.3rem;
+            z-index: 3;
+            animation: line1XR  1s both;
+        }
+        .line2{
+            top: 3rem;
+            left: 9.3rem;
+            z-index: 1;
+            transition: 1.2s; 
+        }
+        .line3{
+            top: 5rem;
+            left: 9.3rem;
+            z-index: 2;
+            animation: line2XR  1s both;
+        }
+
+        &.active{
+
+
+            .line1{
+                animation: line1X  1s both;
+                
+
+            }
+            .line2{
+                width: 0rem;
+                transform: translateX(3.8rem);  
+                transition: .5s; 
+
+            }
+
+            .line3{
+                animation: line2X  1s both; 
+            }
+
+        }
+
+        
+
+        @keyframes line1X {
+            0% {
+                transform: rotate(0);
+              }
+              50% {
+                transform: translateY(2rem) rotate(0);
+              }
+            
+              100% {
+                transform: translateY(2rem) rotate(135deg);
+                background-color: brown;
+              }
+        }
+        @keyframes line1XR {
+            0% {
+                transform: translateY(2rem) rotate(135deg);
+              }
+              50% {
+                transform: translateY(2rem) rotate(0deg);
+              }
+            
+              100% {
+                transform: translateY(0) rotate(0deg);
+              }
+        }
+        @keyframes line2X {
+            0% {
+                transform: rotate(0);
+              }
+              50% {
+                transform: translateY(-2rem) rotate(0);
+              }
+            
+              100% {
+                transform: translateY(-2rem) rotate(45deg);
+                background-color: brown;
+              }
+        }
+        @keyframes line2XR {
+            0% {
+                transform: translateY(-2rem) rotate(45deg);
+              }
+              50% {
+                transform: translateY(-2rem) rotate(0);
+              }
+            
+              100% {
+                transform: translateY(0rem) rotate(0);
+              }
+        }
+
+    }
+    .no-animation {
+        .na{
+            animation: none !important; 
+        }
+        
+    }
+
+    
+}
+
+.day3{
+    background-color: rgb(22, 22, 70);
+
+
+    .circle{
+        border-radius: 50%;
+        width: 18rem;
+        height: 18rem;
+        position: relative;
+        top: 5rem;
+        margin: auto;
+        overflow: hidden;
+        animation: nigth 5s infinite;
+
+
+
+        .sun{
+            position: absolute;
+            background-color: rgb(255, 232, 24);
+            top: 1rem;
+            left: 7rem;
+            width: 3.8rem;
+            height: 3.8rem;
+            border-radius: 50%;
+            transform-origin: 50% 350%;
+            animation: sunTime 5s cubic-bezier(.4,0,.49,1) infinite;
+            
+        }
+
+        .floor{
+            position: absolute;
+            background-color: rgb(238, 204, 92) ;
+            width: 18rem;
+            height: 10rem;
+            top: 10rem;
+            z-index: 3;
+
+            animation: floor 5s infinite;
+
+            .line{
+                width: 18rem;
+                height: .15rem;
+                background-color: rgb(146, 132, 86);
+                animation: lineDune 3.5s infinite;
+            }
+        }
+
+        .piramid1{
+            position: absolute;
+            height: 4rem;
+            width: 5rem;
+            top: 6.1rem;
+            left: 4.1rem;
+            background: #F4F4F4;
+            clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+            animation: piramid2 5s infinite;
+        }
+        .piramid2{
+            position: absolute;
+            z-index: 1;
+            top: 6.1rem;
+            left: 9rem;
+            height: 4rem;
+            width: 6rem;
+            background: #9c9b9b;
+            clip-path: polygon(0 0, 0% 100%, 100% 100%);
+            animation: piramid 5s infinite;
+        }
+
+        .shadow{
+            position: absolute;
+            z-index: 4;
+            clip-path: polygon(95% 25%, 0 0, 100% 0);
+            background: #25252552;
+            width: 11rem;
+            height: 10rem;
+            top: 10rem;
+            left: 4rem;
+            animation: shadow 5s infinite;
+            
+        }
+
+        @keyframes floor {
+            50%{
+                background-color: rgb(238, 204, 92) ;
+            }
+            95%{
+                background-color: rgb(146, 132, 86);
+            }
+        }
+
+        @keyframes shadow{
+            0% {
+                background: #25252552;
+                clip-path: polygon(95% 27%, 0 0, 100% 0);
+          }
+            
+            30% {
+                transform: scaleY(1);
+                clip-path: polygon(53% 69%, 0 0, 100% 0);
+            }
+            
+
+        
+            75% {
+
+                background: #2525252c;
+                
+            }
+
+          100% {
+                clip-path: polygon(0% 0%, 0 0, 100% 0);
+                
+          }
+        }
+        
+
+        @keyframes nigth    {
+            0%{
+                background-color: rgb(22, 22, 70);
+            }
+            50%{
+                background-color: rgb(22, 129, 252);
+            }
+            100%{
+                background-color: rgb(22, 22, 70);
+            }
+        }
+
+
+        @keyframes piramid {
+            35%{
+                background-color: #9c9b9b;
+            }
+            95%{
+                background-color:#F4F4F4 ;
+            }
+            100%{
+                background-color: #9c9b9b;
+            }
+            
+        }
+        @keyframes piramid2 {
+            35%{
+                background-color: #F4F4F4 ;
+            }
+            85%{
+                background-color:#9c9b9b;
+            }
+            100%{
+                background-color: #F4F4F4;
+            }
+        }
+
+        @keyframes sunTime {
+            0%{
+                transform:rotate(-95deg) ;
+            }
+
+            25%{
+                transform:rotate(-25deg)
+            }
+            100%{
+                transform:rotate(95deg) ;
+            }
+        }
+
+        @keyframes lineDune {
+            0%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(4rem);
+            }
+
+            90%{
+                background-color: rgb(146, 132, 86);
+
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+    }
+}
+
+.day4{
+    background-color: rgb(1, 90, 126);
+
+    .contain{
+        position: relative;
+        top: 9rem;
+        
+
+        .circle{
+            position: absolute;
+            background-color: azure;
+            border-radius: 50%;
+            box-shadow: 6px 0 10px 5px rgba(53, 53, 53, 0.719);
+            margin: auto;
+
+        }
+
+        .circle1{
+            width: 10rem;
+            height: 10rem;
+            top: -1rem;
+            left: 8rem;
+            animation: circle1 3.5s cubic-bezier(.21,.98,.6,.99) infinite alternate;
+        }
+        .circle2{
+            width: 6.5rem;
+            height: 6.5rem;
+            top: .8rem;
+            left: 9.8rem;
+            animation: circle2 3.5s cubic-bezier(.21,.98,.6,.99) infinite alternate;
+
+
+        }
+
+        .circle3{
+            width: 4rem;
+            height: 4rem;
+            top: 2rem;
+            left: 11rem;
+            animation: circle3 3.5s cubic-bezier(.21,.98,.6,.99) infinite alternate;
+
+        }
+
+
+
+        @keyframes circle1 {
+            0%, 50% {
+                box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.2);
+                transform: scale(0);
+            }
+        
+            100% {
+                box-shadow: 0px 1px 15px 0 rgba(0,0,0,0.3);
+                transform: scale(1);
+                background-color: rgb(0, 109, 109);
+            }
+
+        }
+        @keyframes circle2 {
+            0%, 65% {
+                box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.2);
+                transform: scale(0);
+            }
+        
+            100% {
+                box-shadow: 0px 1px 15px 0 rgba(0,0,0,0.3);
+                transform: scale(1);
+                background-color: rgb(1, 194, 194);
+            }
+
+        }
+        @keyframes circle3 {
+            0%, 80% {
+                box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.2);
+                transform: scale(0);
+            }
+        
+            100% {
+                box-shadow: 0px 1px 15px 0 rgba(0,0,0,0.3);
+                transform: scale(1);
+                background-color: rgb(0, 255, 255);
+            }
+
+        }
+
+        
+
+
+    }
+    
+}
+
+.day5{
+    background-color: rgb(12, 124, 124);
+    p,span{
+        color: white;
+        font-family: $text;
+        line-height: 1rem;
+        margin: 1rem 0; 
+        margin-bottom: .5rem;
+        display: block;
+    }
+
+    p{
+        font-weight: bolder;
+        text-transform: uppercase;
+    }
+
+    span{
+        font-size: 1.4rem;
+    }
+
+
+    .calendar{
+        box-shadow: 5px 5px 20px rgb(92, 91, 91);
+        border-radius: 5px;
+        overflow: hidden;
+        .infocalendar{
+            background-color: rgb(235, 183, 88);
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            margin: 0;
+            padding: 1.5rem;
+            .money{
+                text-align: end;
+            }
+            
+        }
+
+        .grafics{
+            background-color: azure;
+            height: 19rem;
+
+            .index{
+                display: flex;
+                justify-content: flex-end;
+                span{
+                    font-family: $text;
+                    font-weight: lighter;
+                    color: rgb(32, 32, 32);
+                    margin: 0;
+                    padding: 1.8rem;
+                    padding-top: 1rem;
+                    position: relative;
+
+                    &::before{
+                        content: " ";
+                        position: absolute;
+                        left: -.2rem;
+                        top: 1.2rem;
+                        display: block;
+                        width: 1.5rem;
+                        border-radius: 20px;
+                        height: .5rem;
+
+
+                    }
+                    &:nth-child(1){
+                        &::before{
+                          background-color: rgb(255, 81, 81);  
+                        }
+                        
+                    }
+
+                    &:nth-child(2){
+                        &::before{
+                            background-color: rgb(85, 102, 255);  
+                          }
+                    }
+
+                    
+                }    
+            }
+            
+        }
+    }
+}
+
+.day6{
+    background-image: linear-gradient(48deg, rgb(255, 203, 107) 30%,rgb(197, 115, 48) 90% );
+    
+    p,span{
+        color: rgba(94, 80, 64, 0.822);
+        margin: auto;
+        font-family: $titles;
+    }
+    .presentation{
+        background-color: rgba(255, 255, 255, 0.95);
+        display: flex;
+        justify-content: space-between;
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.589);
+        height: 25rem;
+        width: 95%;
+        margin: 1rem auto;
+
+        .presentationMe{
+            .presentationBoton{
+                margin: 1rem auto;
+                border-radius: 2rem;
+                border: 1px solid rgba(94, 80, 64, 0.9);
+
+                p{
+                    color: rgba(94, 80, 64);
+                    text-align: center;
+                    font-size: 1.3rem;
+                    font-weight:400;
+                    margin: 0;
+                }
+            }
+        }
+        .count{
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+            justify-content: space-between;
+            width: 40%;
+            gap: .1rem;
+
+
+            .presentationCount{
+                
+                padding: 1rem;
+                text-align: center;
+                height: 100%;
+                background-color: rgba(214, 199, 184, 0.555);
+                transition: 1s;
+                &:hover{
+                    background-color: rgba(165, 133, 103, 0.534);
+                    transition: 1s;
+
+                }
+
+
+                p{
+                    font-weight: bolder;
+                    margin-top: 2rem;
+                    line-height: 1rem;
+                }
+                span{
+                    font-size: 1.3rem;
+                }               
+            }
+        }
+    }
+}

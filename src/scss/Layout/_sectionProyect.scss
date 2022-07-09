@@ -1,0 +1,134 @@
+.sectionProyect{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    .important{
+        background-color: $greyDark;
+        max-width: 50rem;
+        margin: 2.5rem auto;
+        color: $greenLigth;
+        padding: 0 1rem;
+        border: solid 2px $greenLigth;
+        box-shadow: 0px 0px 5px rgb(49, 49, 49);
+    }
+
+    h2{
+        color: azure;
+        font-family: $titles;
+        text-align: center;
+        margin: 2.5rem 0;
+        margin-bottom: 5rem;
+        padding: 0;
+    }
+    .proyect{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+        height: 100%;
+        @include desktop{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        @include telefono{
+            grid-template-columns: repeat(1, 1fr);
+
+        }
+        
+    
+
+
+    .glass{
+        max-width: 40rem;
+        width: 100%;
+        height: 25rem;
+        margin: auto;
+        padding: 1.5rem;
+
+        a{
+            text-decoration: none;
+        }
+        
+        
+
+        .info{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 1.5rem;
+
+            p{
+                margin: 0;
+                font-size: 2rem;
+            }
+        }
+
+        i{
+            font-size: 2.5rem;
+        }
+
+        img{
+            width: 30rem;
+            height: 15.5rem;
+            border: 2px solid $greenPrimary;
+            box-shadow: 0 0 3px 2px $greenDark;
+        }
+
+        @include tablet{
+            width: auto;
+            img{
+                width: 25rem;
+                height: 15.5rem;
+            }
+        }
+        
+    }
+    }
+    .aux{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+        .btn{
+            width: 40rem;
+            padding: 1rem 2rem;
+            z-index: 1;
+
+            @include tablet{
+                width: 90%;
+                margin: 2rem;
+            }
+
+            @include telefono{
+                background-color: rgba(27, 109, 91, 0.9);
+            }
+        }
+        .btn3:hover::before{
+            height: 750%;
+          }
+        @include tablet{
+            justify-content: center;
+            .btn3:hover::before{
+                height: 1050%;
+              }
+        }
+
+    }
+    
+    
+}
+@include desktop{
+    .ProyectMobile{
+        &:last-of-type{
+            display: none;
+            visibility: hidden;
+        }
+        
+    }
+}
+
+@include telefono{
+    .ProyectMobile{
+        display: none;
+        visibility: hidden;
+    }
+}

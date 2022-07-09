@@ -1,0 +1,28 @@
+@import 'base/normalize';
+
+@import url('https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,700;1,300;1,400&family=Roboto:ital,wght@0,400;0,700;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700,300');
+@import 'base/variables';
+
+
+
+@import 'base/mixins';
+@import 'base/global';
+
+@import 'Layout/base';
+@import 'Layout/header';
+@import 'Layout/nav';
+@import 'Layout/sectionHome';
+@import 'Layout/sectionAbout';
+@import 'Layout/sectionProyect';
+@import 'Layout/sectionContact';
+@import 'Layout/footer';
+
+@import 'Layout/webJS';
+@import 'Layout/webcss';
+@import 'Layout/darkMode';
+
+/*
+
+@import 'Layout/section'; */

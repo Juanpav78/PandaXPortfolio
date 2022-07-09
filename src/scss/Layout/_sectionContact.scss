@@ -1,0 +1,132 @@
+.sectionContact{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .important{
+        background-color: $greyDark;
+        max-width: 50rem;
+        margin: 2.5rem auto;
+        color: $greenLigth;
+        padding: 0 1rem;
+        border: solid 2px $greenLigth;
+        box-shadow: 0px 0px 5px rgb(49, 49, 49);
+    }
+
+    .aux{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 2fr 0.5fr 2.4fr;
+        justify-content: start;
+        align-content: stretch;
+        justify-items: end;
+        h3{
+            font-family: $text;
+            color:  $white;
+        }
+        .ContactSocial{
+            padding: 0.5rem 2rem;
+            height: 95%;
+            width: 90%;
+            img{
+                width: 20rem;
+            }
+            .btn{
+                z-index: 1;
+                margin: 1rem 0;
+                width: 100%;
+
+                i{
+                    font-size: 2rem;
+                }
+            }
+            @include tablet{
+                width: 100%;
+                grid-column: 1;
+                grid-row: 3;
+                height: 100%;
+            }
+        }
+
+        @include tablet{
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+    }
+}
+
+.formulario{
+    font-family: $text;
+    width: 85%;
+    p{
+        font-size: 1.4rem;
+        font-family: $text;
+        color: white;
+        margin: 2rem 0 0 0;
+    }
+
+    
+
+    label{
+        font-family: $text;
+        font-weight: 500;
+        text-transform: uppercase;
+        display: block;
+        color: $greyDark;
+        text-align: start;
+        
+    }
+
+    input:not([type =  "submit"]), textarea, select{
+        font-family: $text;
+        padding: 1rem;
+        width: 100%;
+        display: block;
+        background-color: $greyDark;
+        border: 2px solid white;
+        border-radius: .5rem;
+        margin-bottom: 2rem;
+        color: white;
+    }
+
+    
+
+    textarea{
+        font-family: $text;
+        height: 20rem;
+    }
+
+    .btn_submit{
+        background-color:$greenLigth ;
+        display: block;
+        width: 100%;
+        font-weight: bold;
+        padding: 1rem;
+        color: $greyDark;
+        border: none;
+        text-transform: uppercase;
+        font-family: $text;
+        margin: 0 auto;
+        border-radius: 5px;
+
+        &:hover{
+            background-color:$greenPrimary ;
+        }
+    }
+    @include tablet{
+        width: 100%;
+    }
+    @include tablet{
+        grid-column: 1;
+        grid-row: 1;
+    }
+}
+fieldset{
+    border-color: $greenLigth;
+}
+legend{
+    font-size: 2rem;
+    font-family: $text;
+    color: white;
+}
+

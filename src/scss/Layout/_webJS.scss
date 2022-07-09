@@ -1,0 +1,14 @@
+.webJS{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+    color: azure;
+    font-family: $titles;
+
+    i{
+        font-size: 10rem;
+        margin-top: -1.5rem;
+    }
+
+}

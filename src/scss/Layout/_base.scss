@@ -1,0 +1,54 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    transition: 1.5s;
+    background-color: $greyDark;
+    scroll-behavior: smooth
+}
+
+.important{
+    cursor: pointer;
+    font-weight: bolder;  
+    text-shadow: 1px 1px 4px $greenDark;
+    background-color: azure;
+    user-select: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: $titles;
+
+    &.active{
+        animation: rotate 1s ease-out;
+    }
+    @keyframes rotate {
+        20%, 80% {
+            transform: rotateY(180deg);
+        }
+
+        50%, 100%{
+            transform: rotateY(360deg);
+        }     
+    }
+    
+}
+
+.button{
+    display: block;
+    background-color: $greenPrimary;
+    padding: 0.5rem;
+    user-select: none;
+    color: azure;
+    border-radius: 5px;
+    width: 15rem;
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: $bold;
+
+    &:hover{
+        background-color: darken($color: $greenPrimary, $amount: 3);
+    }
+}
+
+
+

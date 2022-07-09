@@ -1,0 +1,116 @@
+.dark{
+    background-color: $white;
+    .header, .nav{
+        background-color: $greenLigth;
+    }
+    .header{
+        box-shadow: 0px 4px 20px 0px rgb(32 32 32 / 80%);
+    }
+    .nav{
+        @include tablet{
+            border-top: solid 5px $greenPrimary;
+        }
+        
+    }
+    .section{
+        box-shadow: inset -5px 4px 20px 0px #00826140;
+    }
+    .glass{
+        background-color: $greenPrimary;
+        box-shadow: 0px 0px 20px 5px #2e2e2e40;
+    }
+    .tools{
+
+        .glass{
+            
+            background-color: $white;
+        }
+
+        .icoinfo .imgaws{
+
+            background-color: unset;
+        }
+    }
+
+    .sectionProyect{
+        .glass{
+            
+            background-color: $white;
+            p{
+                color: black;
+            }
+            
+        }
+    }
+    .footerAcc{
+        background-color: $greenPrimary;
+    }
+
+    .footer{
+        background-color: $greenLigth;
+        width: 100%;
+        max-width: none;
+        .social{
+            i{
+                text-shadow: none;
+            }
+        }
+    }
+    .info h2{
+        text-shadow: 0 0 5px #005c4c;
+    }
+    .important{
+       
+        text-shadow: none;
+        background-color: azure;
+    
+        
+    }
+    .fondoAM{
+        background-color: #2ab79bba;
+        box-shadow: inset 0 0 20px 5px #3939399c;
+    }
+    .arrow{
+        box-shadow: 0px 7px 20px #2323237a;
+
+    }
+    .infoHome2{
+        i{
+            color: $greenPrimary;
+            transition: 1s;
+        }
+
+        p{
+            color: #666666;
+            font-weight: bolder;
+        }
+        
+
+    }
+    transition: 1.5s;
+    .info2{
+        p{
+            text-shadow: 0 0 20px #005c4c;
+        }
+        .btnInfo{
+            .btn{
+                background-color: #2cac9662;
+                border: 2px solid #00745d;
+                
+            }
+            .btn::before{
+                background: $greenPrimary;
+            }
+            
+            
+        }
+    }
+    .aux{
+        .ContactSocial{
+            background-color: $greyDark;
+        }
+        .glass{
+            background-color: $greyDark;
+        }
+    }
+}
